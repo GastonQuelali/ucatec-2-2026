@@ -1,6 +1,8 @@
 # UNIDAD 1 — INTRODUCCIÓN A LOS SISTEMAS ERP
 ## Sistemas de Planificación de Recursos Empresariales
 
+**Autor:** Ing. Gaston Genaro Quelali Calcina
+
 ---
 
 **Contenido:**

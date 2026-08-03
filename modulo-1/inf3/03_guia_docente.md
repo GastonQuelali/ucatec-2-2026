@@ -1,5 +1,6 @@
 # GUÍA DOCENTE — Unidad 1: Introducción a los Sistemas ERP
 
+**Autor:** Ing. Gaston Genaro Quelali Calcina
 **Materia:** Informática · **Nivel:** Universitario
 **Tiempo estimado:** 3 clases de 80 minutos (teoría + práctica + evaluación)
 **Material de apoyo:** `01_introduccion_erp.md` (teoría) · `02_presentacion_erp.md` (slides)

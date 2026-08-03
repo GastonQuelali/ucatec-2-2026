@@ -22,6 +22,7 @@ style: |
 # Sistemas ERP
 ## Planificación de Recursos Empresariales
 ### Unidad 1 · Introducción
+#### Ing. Gaston Genaro Quelali Calcina
 
 ---
 
