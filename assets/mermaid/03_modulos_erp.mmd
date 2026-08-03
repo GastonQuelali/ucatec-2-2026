@@ -1,0 +1,22 @@
+flowchart LR
+    CENTRO["BASE DE DATOS CENTRALIZADA<br/>(única fuente de información)"]
+    subgraph MODULOS["Módulos del ERP"]
+        FIN["💰 Finanzas y<br/>Contabilidad"]
+        VTA["🛒 Ventas / CRM"]
+        CMP["📦 Compras y<br/>Abastecimiento"]
+        INV["📊 Inventario /<br/>Logística"]
+        PRO["🏭 Producción /<br/>MRP"]
+        RHS["👥 Recursos Humanos<br/>y Nómina"]
+        PRJ["📁 Proyectos"]
+        MNT["🔧 Mantenimiento"]
+        BI["📈 Reportes /<br/>BI"]
+    end
+    FIN --- CENTRO
+    VTA --- CENTRO
+    CMP --- CENTRO
+    INV --- CENTRO
+    PRO --- CENTRO
+    RHS --- CENTRO
+    PRJ --- CENTRO
+    MNT --- CENTRO
+    BI --- CENTRO

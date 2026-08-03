@@ -1,0 +1,7 @@
+flowchart LR
+    U["Usuario"] --> R1["ROL<br/>Administrador"]
+    U --> R2["ROL<br/>Vendedor"]
+    U --> R3["ROL<br/>Contador"]
+    R1 --> P1["✓ Todos los módulos<br/>✓ Crear usuarios<br/>✓ Configurar empresas"]
+    R2 --> P2["✓ Ver catálogo<br/>✓ Cargar pedidos<br/>✗ Ver costos internos<br/>✗ Acceder a contabilidad"]
+    R3 --> P3["✓ Facturación<br/>✓ Reportes contables<br/>✗ Modificar precios de venta"]

@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant ADM as Administrador
+    participant ERP as ERP
+    participant BD as Base de datos
+    participant USR as Usuario
+
+    ADM->>ERP: Crear nuevo usuario (login, nombre, correo)
+    ERP->>BD: Insertar registro de usuario
+    ADM->>ERP: Asignar empresa y rol (permisos)
+    ERP->>BD: Guardar relación usuario-rol
+    ADM->>ERP: Generar contraseña inicial
+    ERP->>USR: Envía credenciales (ej. por correo)
+    USR->>ERP: Ingresa usuario + contraseña (autenticación)
+    ERP->>BD: Validar credenciales
+    BD-->>ERP: Credenciales válidas ✓
+    ERP->>ERP: Asignar permisos según rol (autorización)
+    USR->>ERP: Trabaja según su rol
+    ADM->>ERP: Desactivar / dar de baja al usuario
+    ERP->>BD: Marcar usuario como inactivo

@@ -1,0 +1,15 @@
+flowchart LR
+    A["1. Venta de<br/>100 unidades<br/>(Módulo Ventas)"]
+    B["2. Verifica stock<br/>(Inventario)"]
+    C["3. Descuenta stock<br/>(Inventario)"]
+    D["4. Genera factura<br/>(Finanzas)"]
+    E["5. Genera orden de<br/>fabricación si falta<br/>(Producción)"]
+    F["6. Genera orden<br/>de compra a proveedor<br/>(Compras)"]
+    G["7. Actualiza reportes<br/>e indicadores<br/>(Reportes / BI)"]
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    E --> F
+    D --> G
+    C --> G

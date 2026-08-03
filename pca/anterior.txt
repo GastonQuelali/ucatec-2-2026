@@ -1,0 +1,343 @@
+Unidades de aprendizaje
+
+Temas
+
+Subtemas
+
+ 
+
+ 
+
+UNIDAD 1
+
+1. INTRODUCCIÓN ERP SISTEMAS DE PLANIFICACIÓN DE RECURSOS EMPRESARIALES	
+ 
+
+1.1. Usos y aplicaciones
+
+1.2. Tipos de ERP
+
+1.3. Inserción de usuarios y empresas.
+
+ 
+
+ 
+
+UNIDAD 2
+
+ 
+
+2. INTRODUCCIÓN A LAS BASES DE DATOS (BD)
+
+2.1. Conceptos fundamentales
+
+2.2. SQL. Gestor de base de datos
+
+2.3. Tablas
+
+2.4. Registros y Tipos de datos
+
+ 
+
+ 
+
+UNIDAD 3
+
+ 
+
+3. INTRODUCCIÓN A HERRAMIENTA DE SGBD (ACCESS)
+
+3.1. Abrir base de datos
+
+3.2. Conceptos preliminares.
+
+3.3. ¿Qué es una base de datos?
+
+3.4. ¿Qué es una tabla?
+
+3.5. ¿Cómo se organiza una tabla?
+
+ 
+
+ 
+
+ 
+
+ 
+
+UNIDAD 4
+
+ 
+
+ 
+
+ 
+
+ 
+
+4. MANEJO BÁSICO DE INFORMACIÓN
+
+ 
+
+4.1. Agregar, modificar y eliminar registros dentro de una tabla.
+
+4.2. Buscar, ordenar y filtrar registros dentro de una tabla.
+
+4.3. Diseño de Base de datos
+
+4.4. Diseño de tablas
+
+4.5. Crear nueva base de datos.
+
+4.6. Diseño de tablas.
+
+4.7. Propiedades de campo
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+UNIDAD 5
+
+ 
+
+ 
+
+ 
+
+ 
+
+5. RELACIONES ENTRE TABLAS
+
+5.1. Agregar, Relaciones entre tablas.
+
+5.2. Editar relaciones.
+
+5.3. Tipo de relaciones y combinación
+
+5.4. Consultas de selección
+
+5.5. Creación de consultas sencillas,
+
+5.6. Creación de consultas de resumen referencias cruzadas.
+
+5.7. Creación de consultas de referencias cruzadas.
+
+5.8. Creación de consultas con parámetros
+
+5.9. Consultas de acción
+
+5.10. Creación de consultas de actualización
+
+ 
+
+ 
+
+UNIDAD 6
+
+ 
+
+6. INTRODUCCIÓN AL LENGUAJE SQL.
+
+ 
+
+6.1. Diseño de formularios
+
+6.2. Creación de formularios.
+
+
+7. DISEÑO DE INFORMES
+
+7.1. Creación de informes sencillos utilizando el asistente para informes.
+
+
+ACTIVIDADES DE APRENDISAJE
+
+Semana
+
+Temas a desarrollar
+
+Actividades formativas para la semana
+
+Temas para el foro
+
+
+
+
+
+
+
+SEMANA 1
+
+INTRODUCCIÓN ERP SISTEMAS DE PLANIFICACIÓN DE RECURSOS EMPRESARIALES
+
+
+
+Exposición del docente 
+
+y trabajos de 
+
+investigación
+
+
+
+
+
+Tipos de ERP
+
+
+
+
+
+
+
+SEMANA 2
+
+INTRODUCCIÓN A LAS BASES DE DATOS (BD)
+
+Lectura de comprensión
+
+y ejemplificación por 
+
+parte de los estudiantes
+
+
+
+Registros y tipos de datos
+
+
+
+
+
+SEMANA 3
+
+INTRODUCCIÓN A 
+
+HERRAMIENTA  
+
+DE SGBD (ACCESS)
+
+
+
+Aplicación de la 
+
+herramienta de Access
+
+
+
+Características de una base de datos
+
+
+
+
+
+
+
+SEMANA 4
+
+
+
+MANEJO BÁSICO DE INFORMACIÓN
+
+Intercambio de trabajos
+
+para la verificación 
+
+de la aplicabilidad de
+
+la herramienta de Access
+
+Búsqueda y filtrado de 
+
+registros
+
+
+
+
+
+
+
+SEMANA 5
+
+
+
+
+
+RELACIONES  
+
+ENTRE TABLAS
+
+
+
+
+
+Explicación del docente
+
+Seguimiento a los trabajos de competencias
+
+
+
+
+
+Consultas de selección y de acción
+
+
+
+
+
+
+
+
+
+SEMANA 6
+
+
+
+INTRODUCCIÓN AL LENGUAJE SQL.
+
+
+
+
+
+DISEÑO DE INFORMES
+
+Los estudiantes 
+
+buscaran softwares
+
+que ayuden a manejar 
+
+bases de datos
+
+
+
+Presentación del 
+
+desarrollo de todo lo
+
+aprendido en la 
+
+materia
+
+
+
+Características del lenguaje 
+
+SQL
+
+
+
+Personalización de informes
+
+
+BIBLIOGRAFIA
+
+Ibaceta, J. B. (2012). Microsoft Access: diseño de aplicaciones sencillas de bases de datos. Ideaspropias Editorial SL.Balderrey P. (2015). Access básico.
+Cox, J., & Lambert, J. (2010). Microsoft Access 2010. Microsoft.
+Ortí, G. Q. (2003). Aprende Microsoft Access (No. 17). Universitat Jaume I.

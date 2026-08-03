@@ -1,0 +1,12 @@
+flowchart TB
+    ERP["ERP<br/>(una instalación / una base de datos)"]
+    EMP1["Empresa A<br/>(datos, moneda, configuración propios)"]
+    EMP2["Empresa B"]
+    EMP3["Empresa C"]
+    ERP --> EMP1
+    ERP --> EMP2
+    ERP --> EMP3
+    EMP1 --> U1["Usuario 1<br/>Rol: Administrador"]
+    EMP1 --> U2["Usuario 2<br/>Rol: Vendedor"]
+    EMP1 --> U3["Usuario 3<br/>Rol: Contador"]
+    EMP2 --> U4["Usuario 4<br/>Rol: Comprador"]

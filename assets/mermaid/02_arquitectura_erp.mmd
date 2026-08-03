@@ -1,0 +1,17 @@
+flowchart TB
+    subgraph Capa_Presentacion["Capa de Presentación (Cliente)"]
+        A1["Pantalla web / aplicación de escritorio<br/>Interfaz de usuario"]
+    end
+    subgraph Capa_Aplicacion["Capa de Aplicación (Lógica de negocio)"]
+        B1["Módulos de negocio<br/>(ventas, compras, contabilidad…)"]
+        B2["Reglas de negocio y validaciones"]
+        B3["Gestión de usuarios, roles y permisos"]
+    end
+    subgraph Capa_Datos["Capa de Datos"]
+        C1["Base de datos centralizada<br/>(PostgreSQL, Oracle, SQL Server…)"]
+    end
+    A1 --> B1
+    B1 --> B2
+    B2 --> B3
+    B1 --> C1
+    B2 --> C1
