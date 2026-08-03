@@ -14,6 +14,7 @@ style: |
   blockquote { background: #eef4fb; border-left: 5px solid #0b4f8a; padding: 8px 14px; }
   .columns { display: flex; gap: 30px; }
   .columns > div { flex: 1; }
+  img { display: block; margin: 0 auto; }
 ---
 
 <!-- _class: title -->
@@ -53,15 +54,10 @@ Sistema de gestión **integrado** que administra los procesos de la empresa con 
 
 ## Evolución histórica
 
-```mermaid
-timeline
-    title Evolución de los ERP
-    1960s-70s : MRP – materiales para producción
-    1980s : MRP II – producción + máquinas + mano de obra
-    1990s : ERP – integra toda la empresa (Gartner)
-    2000s : ERP II – internet, CRM, SCM
-    2010s+ : Cloud ERP – SaaS, actualizaciones automáticas
-```
+<!-- fuente: assets/mermaid/01_evolucion_erp.mmd -->
+![w:910](assets/img/01_evolucion_erp.png)
+
+<small>*Fuente editable: `assets/mermaid/01_evolucion_erp.mmd`*</small>
 
 ---
 
@@ -92,25 +88,8 @@ timeline
 
 ## Arquitectura en 3 capas
 
-```mermaid
-flowchart TB
-    subgraph P["Capa de Presentación"]
-        A1["Interfaz de usuario<br/>(navegador / app)"]
-    end
-    subgraph A["Capa de Aplicación"]
-        B1["Módulos de negocio"]
-        B2["Reglas de negocio"]
-        B3["Usuarios, roles, permisos"]
-    end
-    subgraph D["Capa de Datos"]
-        C1["Base de datos centralizada<br/>(PostgreSQL, Oracle…)"]
-    end
-    A1 --> B1
-    B1 --> B2
-    B1 --> C1
-    B2 --> C1
-    B3 --> C1
-```
+<!-- fuente: assets/mermaid/02_arquitectura_erp.mmd -->
+![w:360](assets/img/02_arquitectura_erp.png)
 
 > ⚠️ La capa de datos es una **base de datos relacional** → tema de las Unidades 2 a 6.
 
@@ -118,41 +97,17 @@ flowchart TB
 
 ## Módulos típicos de un ERP
 
-```mermaid
-flowchart LR
-    CENTRO["BASE DE DATOS CENTRALIZADA"]
-    FIN["Finanzas y Contabilidad"]
-    VTA["Ventas / CRM"]
-    CMP["Compras"]
-    INV["Inventario / Logística"]
-    PRO["Producción / MRP"]
-    RHS["RRHH y Nómina"]
-    PRJ["Proyectos"]
-    BI["Reportes / BI"]
-    FIN --- CENTRO
-    VTA --- CENTRO
-    CMP --- CENTRO
-    INV --- CENTRO
-    PRO --- CENTRO
-    RHS --- CENTRO
-    PRJ --- CENTRO
-    BI --- CENTRO
-```
+<!-- fuente: assets/mermaid/13_modulos_horizontal.mmd -->
+![w:900](assets/img/13_modulos_horizontal.png)
+
+<small>*Fuente editable: `assets/mermaid/13_modulos_horizontal.mmd`*</small>
 
 ---
 
 ## Flujo de datos integrado — Una venta
 
-```mermaid
-flowchart LR
-    A["Venta de 100 u."] --> B["Verifica stock"]
-    B --> C["Descuenta stock"]
-    C --> D["Factura"]
-    C --> E["Orden de fabricación si falta"]
-    E --> F["Orden de compra a proveedor"]
-    D --> G["Reportes actualizados"]
-    C --> G
-```
+<!-- fuente: assets/mermaid/04_flujo_venta.mmd -->
+![w:900](assets/img/04_flujo_venta.png)
 
 **Un solo registro alimenta todos los módulos.** Sin re-tipear nada.
 
@@ -203,47 +158,15 @@ flowchart LR
 
 ## 1.1 Aplicaciones por sector
 
-```mermaid
-mindmap
-  root((Sectores))
-    Industrial
-      Producción y MRP
-      Control de calidad
-    Retail
-      Punto de venta
-      Inventario multicanal
-    Servicios
-      Facturación por horas
-      Proyectos
-    Salud
-      Pacientes
-      Stock de insumos
-    Construcción
-      Presupuesto de obra
-      Avance de obra
-    Educación
-      Inscripciones
-      Aranceles
-```
+<!-- fuente: assets/mermaid/06_sectores_erp.mmd -->
+![w:780](assets/img/06_sectores_erp.png)
 
 ---
 
 ## 1.2 Tipos de ERP
 
-```mermaid
-flowchart TD
-    ROOT["TIPOS DE ERP"]
-    ROOT --> DEP["Según despliegue"]
-    ROOT --> ALC["Según alcance"]
-    ROOT --> LIC["Según licencia"]
-    DEP --> ONP["On-premise"]
-    DEP --> CLOUD["Cloud / SaaS"]
-    DEP --> HIB["Híbrido"]
-    ALC --> HOR["Horizontal"]
-    ALC --> VER["Vertical"]
-    LIC --> PRO["Propietario"]
-    LIC --> LIB["Open Source"]
-```
+<!-- fuente: assets/mermaid/05_tipos_erp.mmd -->
+![w:900](assets/img/05_tipos_erp.png)
 
 ---
 
@@ -277,16 +200,8 @@ flowchart TD
 
 ## 1.2 Criterios de selección
 
-```mermaid
-flowchart LR
-    A["1. Necesidades"] --> B["2. Presupuesto"]
-    B --> C["3. Despliegue (nube/local)"]
-    C --> D["4. Tamaño de empresa"]
-    D --> E["5. Funcionalidad por industria"]
-    E --> F["6. Licencias y soporte"]
-    F --> G["7. Facilidad de uso"]
-    G --> H["Decisión"]
-```
+<!-- fuente: assets/mermaid/11_seleccion_erp.mmd -->
+![w:900](assets/img/11_seleccion_erp.png)
 
 ---
 
@@ -307,19 +222,8 @@ flowchart LR
 
 ## 1.3 Estructura multientidad
 
-```mermaid
-flowchart TB
-    ERP["ERP (una instalación)"]
-    EMP1["Empresa A"]
-    EMP2["Empresa B"]
-    EMP3["Empresa C"]
-    ERP --> EMP1
-    ERP --> EMP2
-    ERP --> EMP3
-    EMP1 --> U1["Usuario: Admin"]
-    EMP1 --> U2["Usuario: Vendedor"]
-    EMP2 --> U4["Usuario: Comprador"]
-```
+<!-- fuente: assets/mermaid/07_multientidad.mmd -->
+![w:600](assets/img/07_multientidad.png)
 
 - Varias empresas, una sola instalación
 - Datos **aislados** entre empresas
@@ -329,15 +233,8 @@ flowchart TB
 
 ## 1.3 Seguridad por roles (RBAC)
 
-```mermaid
-flowchart LR
-    U["Usuario"] --> R2["ROL Vendedor"]
-    U --> R3["ROL Contador"]
-    U --> R1["ROL Administrador"]
-    R1 --> P1["✓ Todo: usuarios, empresas, módulos"]
-    R2 --> P2["✓ Pedidos, catálogo<br/>✗ Contabilidad, costos"]
-    R3 --> P3["✓ Facturas, reportes<br/>✗ Pedidos"]
-```
+<!-- fuente: assets/mermaid/08_rbac.mmd -->
+![w:420](assets/img/08_rbac.png)
 
 **RBAC:** el usuario recibe **roles**, no permisos sueltos → mínimo privilegio, fácil auditoría.
 
