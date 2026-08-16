@@ -1,0 +1,6 @@
+flowchart TD
+    A["Herramientas de BD → Relaciones"] --> B["Agregar tablas<br/>(Libros y Prestamos)"]
+    B --> C["Arrastrar PK → FK<br/>(Libros.ID → Prestamos.LibroID)"]
+    C --> D["Activar integridad referencial"]
+    D --> E["Activar actualización/eliminación en cascada"]
+    E --> F["Crear"]

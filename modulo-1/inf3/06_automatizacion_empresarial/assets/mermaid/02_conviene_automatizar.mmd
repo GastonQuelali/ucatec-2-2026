@@ -1,0 +1,6 @@
+flowchart TD
+    PREG["¿El proceso es repetitivo y usa datos?"]
+    PREG -- "Sí" --> REP["¿Sigue reglas fijas?"]
+    PREG -- "No" --> NO["No conviene<br/>(tarea creativa o excepcional)"]
+    REP -- "Sí" --> SÍ["AUTOMATIZAR"]
+    REP -- "No" --> NO2["Automatización parcial o manual"]

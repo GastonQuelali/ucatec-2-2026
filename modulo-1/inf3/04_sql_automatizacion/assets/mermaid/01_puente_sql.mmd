@@ -1,0 +1,6 @@
+flowchart LR
+    U["Usuario"] --> AP["Aplicación<br/>(formulario, página web)"]
+    AP --> SQL["Instrucción SQL"]
+    SQL --> SGBD["SGBD<br/>(base de datos)"]
+    SGBD --> R["Resultado<br/>(datos)"]
+    R --> U

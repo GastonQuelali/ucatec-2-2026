@@ -1,0 +1,7 @@
+flowchart TD
+    SUB["¿Qué plataforma elegir?"]
+    SUB --> MS["¿La empresa usa Microsoft?<br/>(Outlook, Teams, Office)"]
+    MS -- "Sí" --> PA["Power Automate"]
+    MS -- "No" --> ZAP["Zapier"]
+    SUB --> GRAT["¿Busca el plan gratuito más simple?"]
+    GRAT --> ZAP2["Zapier (comenzar rápido)"]

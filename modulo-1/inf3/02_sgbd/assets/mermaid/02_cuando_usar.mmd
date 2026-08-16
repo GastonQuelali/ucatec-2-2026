@@ -1,0 +1,8 @@
+flowchart TD
+    A["¿Necesitás una BD?"] --> B{"¿Múltiples usuarios\nremotos?"}
+    B -->|Sí| C{"¿Necesitás SQL\ny escalabilidad?"}
+    C -->|Sí| MYSQL["MySQL / PostgreSQL<br/>(servidor)"]
+    C -->|No| CLOUD["Google Tables / Airtable<br/>(nube)"]
+    B -->|No| D{"¿Es para aprender\no una PYME?"}
+    D -->|Sí| ACCESS["Microsoft Access<br/>(escritorio)"]
+    D -->|No| MYSQL

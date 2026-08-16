@@ -1,0 +1,5 @@
+flowchart LR
+    USR["Usuario"] --> F["Formulario<br/>(interfaz)"]
+    F --> VAL["Validación<br/>(tipos, obligatorios)"]
+    VAL --> SQL1["Instrucción SQL<br/>(INSERT / UPDATE)"]
+    SQL1 --> BD["Base de datos"]

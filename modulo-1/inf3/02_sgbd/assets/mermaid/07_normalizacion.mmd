@@ -1,0 +1,10 @@
+flowchart TB
+    subgraph MAL["❌ Diseño incorrecto (datos repetidos)"]
+        M1["Pedido 1 — Ana Pérez — La Paz"]
+        M2["Pedido 2 — Ana Pérez — La Paz"]
+    end
+    subgraph BIEN["✅ Diseño correcto (relaciones)"]
+        C1["Clientes: ID 1 → Ana Pérez → La Paz"]
+        P1["Pedido 1 → Cliente_ID 1"]
+        P2["Pedido 2 → Cliente_ID 1"]
+    end

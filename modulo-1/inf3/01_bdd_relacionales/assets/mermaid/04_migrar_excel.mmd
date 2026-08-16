@@ -1,0 +1,12 @@
+flowchart TD
+    A["¿Usás Excel para datos?"] --> B{"¿Más de 1 persona\nedita al mismo tiempo?"}
+    B -->|Sí| MIGRAR["Migrar a SGBD"]
+    B -->|No| C{"¿Hay datos\nduplicados?"}
+    C -->|Sí| MIGRAR
+    C -->|No| D{"¿Necesitás validar\ntipos de datos?"}
+    D -->|Sí| MIGRAR
+    D -->|No| E{"¿Los archivos\nse vuelven lentos?"}
+    E -->|Sí| MIGRAR
+    E -->|No| F{"¿Necesitás relaciones\nentre tablas?"}
+    F -->|Sí| MIGRAR
+    F -->|No| EXCEL["Seguí con Excel\npor ahora"]

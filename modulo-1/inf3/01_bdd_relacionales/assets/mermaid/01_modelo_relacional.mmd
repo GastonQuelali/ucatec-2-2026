@@ -1,0 +1,30 @@
+erDiagram
+    CLIENTES {
+        int id PK
+        string nombre
+        string email
+        string telefono
+        string ciudad
+    }
+    PEDIDOS {
+        int id PK
+        int cliente_id FK
+        date fecha
+        decimal total
+    }
+    PRODUCTOS {
+        int id PK
+        string nombre
+        decimal precio
+        int stock
+    }
+    DETALLE_PEDIDO {
+        int id PK
+        int pedido_id FK
+        int producto_id FK
+        int cantidad
+        decimal subtotal
+    }
+    CLIENTES ||--o{ PEDIDOS : "realiza"
+    PEDIDOS ||--o{ DETALLE_PEDIDO : "contiene"
+    PRODUCTOS ||--o{ DETALLE_PEDIDO : "se incluye en"

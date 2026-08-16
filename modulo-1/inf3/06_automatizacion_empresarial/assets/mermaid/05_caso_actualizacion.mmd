@@ -1,0 +1,4 @@
+flowchart LR
+    PED["Cliente hace un pedido"] --> REG["Se crea el pedido<br/>en la tabla Pedidos"]
+    REG --> STK["Se actualiza el stock<br/>en la tabla Productos"]
+    STK --> FIN["Pedido listo"]

@@ -1,0 +1,7 @@
+flowchart LR
+    subgraph MANUAL["Proceso manual"]
+        M1["Se recibe un pedido"] --> M2["Alguien lo escribe a mano"] --> M3["Se envía mail a mano"]
+    end
+    subgraph AUTO["Proceso automatizado"]
+        A1["Se recibe un pedido"] --> A2["El sistema lo registra solo"] --> A3["El mail se envía solo"]
+    end

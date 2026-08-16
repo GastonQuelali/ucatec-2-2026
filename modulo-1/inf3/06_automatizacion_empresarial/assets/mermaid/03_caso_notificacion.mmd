@@ -1,0 +1,4 @@
+flowchart LR
+    BD["Tabla Libros<br/>(Stock < 5)"] --> CHK["Detector<br/>(¿cambió el stock?)"]
+    CHK --> NOT["Notificación<br/>(mail / mensaje)"]
+    NOT --> ENC["Encargado de compras<br/>(recibe el aviso)"]

@@ -1,0 +1,11 @@
+flowchart TB
+    subgraph VISTA_DATOS["Vista Hoja de datos"]
+        A1["ID"] --- A2["Nombre"] --- A3["Email"]
+        A4["1"] --- A5["Ana"] --- A6["ana@email.com"]
+        A7["2"] --- A8["Luis"] --- A9["luis@email.com"]
+    end
+    subgraph VISTA_DISENO["Vista Diseño"]
+        B1["Campo: ID<br/>Tipo: Autonumérico<br/>PK: Sí"]
+        B2["Campo: Nombre<br/>Tipo: Texto corto<br/>PK: No"]
+        B3["Campo: Email<br/>Tipo: Texto largo<br/>PK: No"]
+    end

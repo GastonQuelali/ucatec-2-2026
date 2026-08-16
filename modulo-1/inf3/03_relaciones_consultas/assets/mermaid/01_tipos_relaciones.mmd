@@ -1,0 +1,10 @@
+flowchart LR
+    subgraph UNO_A_UNO["1 : 1 (Uno a uno)"]
+        A1["Persona"] --- B1["Pasaporte"]
+    end
+    subgraph UNO_A_MUCHOS["1 : N (Uno a muchos)"]
+        A2["Libro"] --- B2["Préstamos"]
+    end
+    subgraph MUCHOS_A_MUCHOS["N : M (Muchos a muchos)"]
+        A3["Estudiante"] --- B3["Materias"]
+    end

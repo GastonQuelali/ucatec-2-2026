@@ -1,48 +1,88 @@
 # UCatec 2 · 2026 — Material Didáctico de Informática
 
-Repositorio con el material docente de la asignatura **Informática** de UCatec, organizado por módulos y unidades.
+Repositorio con el material docente de la asignatura **Sistemas de Datos para la Gestión** (SIS216) de UCatec, organizado por módulos y temas.
 
 ## Estructura del repositorio
 
 ```
-modulo-1/
-├── inf3/                     # Unidad 1 — Introducción a los Sistemas ERP
-│   ├── 01_introduccion_erp.md    # Teoría completa de la unidad
-│   ├── 02_presentacion_erp.md    # Slides (Marp)
-│   ├── 03_guia_docente.md        # Guía y plan de clases
-│   ├── erp_teoria_para_word.md   # Teoría lista para exportar a Word
-│   ├── erp_teoria.docx           # Teoría en formato Word
-│   ├── presentacion_erp.pptx     # Presentación en PowerPoint
-│   ├── presentacion_erp.pdf      # Presentación en PDF
-│   ├── assets/
-│   │   ├── img/                  # Diagramas renderizados (PNG)
-│   │   └── mermaid/              # Diagramas fuente (Mermaid)
-│   └── pca/                      # Material del plan curricular anual
-└── prog-avanzada/            # (en preparación)
+modulo-1/inf3/
+├── README.md
+├── generate_word_md.py              # Script para generar teoria_para_word.md
+├── foros.md                         # Temas de foro por tema (recomendados + opciones)
+│
+├── 00_introduccion_erp/             # Tema 0 — Introducción a los Sistemas ERP
+│   ├── teoria.md                    # Teoría completa del tema
+│   ├── presentacion.md              # Slides (Marp)
+│   ├── guia_docente.md              # Guía docente y plan de clases
+│   ├── teoria_para_word.md          # Generado: teoría con imágenes (para Word)
+│   ├── teoria.docx                  # Teoría en Word
+│   ├── presentacion.pptx            # Presentación en PowerPoint
+│   ├── presentacion.pdf             # Presentación en PDF
+│   └── assets/
+│       ├── img/                     # Diagramas renderizados (PNG)
+│       └── mermaid/                 # Diagramas fuente (Mermaid)
+│
+├── 01_bdd_relacionales/             # Tema 1 — Introducción y Práctica con BDD Relacionales
+├── 02_sgbd/                         # Tema 2 — Manejo Básico de SGBD
+├── 03_relaciones_consultas/         # Tema 3 — Relaciones, Consultas y Análisis
+├── 04_sql_automatizacion/           # Tema 4 — Introducción al SQL y Automatización
+├── 05_informes_visualizacion/       # Tema 5 — Informes, Visualización y Decisiones
+├── 06_automatizacion_empresarial/   # Tema 6 — Automatización y Conectores Digitales
+│
+└── pca/                             # Material administrativo del PCA
+    ├── contenido_minimo.md
+    └── anterior.txt
 ```
 
-## Módulo 1 · Unidad 1: Introducción a los Sistemas ERP
+## Convención de archivos por tema
 
-- **Objetivo:** que el estudiante comprenda qué es un ERP, su evolución, componentes y aplicaciones, y practique los conceptos en Odoo.
-- **Recursos:**
-  - `01_introduccion_erp.md` — teoría completa (definición, historia, arquitectura, módulos, tipos, multientidad, RBAC, práctica en Odoo).
-  - `02_presentacion_erp.md` — presentación para clase (Marp + Mermaid).
-  - `03_guia_docente.md` — guía docente con plan de 3 clases de 80 minutos.
-- **Diagramas:** los fuentes `.mmd` están en `assets/mermaid/` y sus versiones renderizadas `.png` en `assets/img/`.
+| Archivo | Propósito |
+|---|---|
+| `teoria.md` | Contenido de estudio completo (fuente maestra) |
+| `presentacion.md` | Slides para clase (Marp + Mermaid) |
+| `guia_docente.md` | Plan de clases, evaluación y material didáctico |
+| `teoria_para_word.md` | Generado por script (mermaid → imágenes) |
+| `teoria.docx` | Exportado a Word |
+| `presentacion.pptx` | Exportado a PowerPoint |
+| `presentacion.pdf` | Exportado a PDF |
+| `assets/mermaid/` | Diagramas fuente `.mmd` |
+| `assets/img/` | Diagramas renderizados `.png` |
 
-## Cómo renderizar la presentación
-
-La presentación `02_presentacion_erp.md` usa **Marp**:
+## Generar teoria_para_word.md
 
 ```bash
-marp modulo-1/inf3/02_presentacion_erp.md --allow-local-files --pdf
+# Para un tema específico
+python3 modulo-1/inf3/generate_word_md.py 00_introduccion_erp
+
+# Para todos los temas
+python3 modulo-1/inf3/generate_word_md.py --all
 ```
 
-Los diagramas Mermaid requieren `mmdc` (mermaid-cli) para regenerar los PNG:
+## Renderizar presentaciones
+
+La presentación `presentacion.md` usa **Marp**:
+
+```bash
+marp modulo-1/inf3/00_introduccion_erp/presentacion.md --allow-local-files --pdf
+```
+
+Los diagramas Mermaid requieren `mmdc` (mermaid-cli):
 
 ```bash
 mmdc -i assets/mermaid/01_evolucion_erp.mmd -o assets/img/01_evolucion_erp.png
 ```
+
+## Contenidos del curso (SIS216)
+
+| # | Tema | Estado |
+|---|---|---|
+| 0 | Introducción a los Sistemas ERP | ✅ Completo |
+| 1 | Introducción y Práctica con BDD Relacionales | ✅ Completo |
+| 2 | Manejo Básico de SGBD | ✅ Completo |
+| 3 | Relaciones, Consultas y Análisis Avanzado | ✅ Completo |
+| 4 | Introducción al SQL y Automatización | ✅ Completo |
+| 5 | Informes, Visualización y Toma de Decisiones | ✅ Completo |
+| 6 | Automatización Empresarial y Conectores Digitales | ✅ Completo |
 
 ## Autor
 

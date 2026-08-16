@@ -1,0 +1,17 @@
+erDiagram
+    ESTUDIANTE {
+        int id PK
+        string nombre
+    }
+    MATERIA {
+        int id PK
+        string nombre
+    }
+    INSCRIPCION {
+        int id PK
+        int estudiante_id FK
+        int materia_id FK
+        date fecha
+    }
+    ESTUDIANTE ||--o{ INSCRIPCION : "se inscribe"
+    MATERIA ||--o{ INSCRIPCION : "es dictada en"

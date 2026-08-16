@@ -46,7 +46,6 @@ Los ERP no surgieron de la nada: evolucionaron a partir de los sistemas de produ
 
 *Figura: Evolución histórica de los ERP*
 
-
 **Línea del tiempo resumida:**
 
 | Período | Sistema | Qué agregó |
@@ -95,7 +94,6 @@ Los ERP no surgieron de la nada: evolucionaron a partir de los sistemas de produ
 
 *Figura: Arquitectura en 3 capas de un ERP*
 
-
 **Las tres capas:**
 - **Capa de presentación:** lo que ve el usuario (navegador web o aplicación cliente).
 - **Capa de aplicación:** la lógica de negocio; donde se ejecutan las reglas y los módulos.
@@ -108,7 +106,6 @@ Los ERP no surgieron de la nada: evolucionaron a partir de los sistemas de produ
 ![Módulos típicos de un ERP en torno a la base de datos centralizada](assets/img/03_modulos_erp.png)
 
 *Figura: Módulos típicos de un ERP en torno a la base de datos centralizada*
-
 
 | Módulo | Función principal | Ejemplo de proceso |
 |---|---|---|
@@ -133,7 +130,6 @@ La verdadera ventaja del ERP se ve en el **flujo automático de información ent
 ![Flujo de datos integrado: una venta](assets/img/04_flujo_venta.png)
 
 *Figura: Flujo de datos integrado: una venta*
-
 
 **Lectura del flujo:** cuando el vendedor registra la venta, el ERP (1) verifica el stock, (2) lo descuenta automáticamente, (3) emite la factura, (4) dispara la orden de fabricación si no hay stock suficiente, (5) genera la orden de compra al proveedor cuando el material baja del punto de reposición y (6) actualiza los indicadores. Todo esto **sin que nadie vuelva a tipear los datos**, porque todos los módulos comparten la misma base de datos.
 
@@ -170,7 +166,6 @@ La verdadera ventaja del ERP se ve en el **flujo automático de información ent
 
 *Figura: Ciclo de vida de un ERP*
 
-
 ---
 
 ## 1.1 Usos y aplicaciones
@@ -193,7 +188,6 @@ La verdadera ventaja del ERP se ve en el **flujo automático de información ent
 ![Aplicaciones de los ERP por sector](assets/img/06_sectores_erp.png)
 
 *Figura: Aplicaciones de los ERP por sector*
-
 
 | Sector | Módulos que más se usan | Ejemplo de aplicación |
 |---|---|---|
@@ -230,7 +224,6 @@ La verdadera ventaja del ERP se ve en el **flujo automático de información ent
 ![Clasificación de los tipos de ERP](assets/img/05_tipos_erp.png)
 
 *Figura: Clasificación de los tipos de ERP*
-
 
 ### 1.2.2 Según el despliegue (dónde se instala)
 
@@ -283,7 +276,6 @@ La verdadera ventaja del ERP se ve en el **flujo automático de información ent
 
 *Figura: Criterios de selección de un ERP*
 
-
 **Preguntas guía para elegir un ERP:**
 1. ¿Qué procesos necesitamos automatizar prioritariamente?
 2. ¿Cuánto podemos pagar de licencia, implementación y mantenimiento?
@@ -321,7 +313,6 @@ La mayoría de los ERP modernos permiten administrar **varias empresas dentro de
 
 *Figura: Estructura multientidad (multitenant)*
 
-
 **Beneficios de la estructura multientidad:**
 - **Un solo sistema** para administrar varias empresas (ideal para holdings o grupos).
 - **Aislamiento de datos:** la Empresa A no ve los datos de la Empresa B.
@@ -335,7 +326,6 @@ La mayoría de los ERP modernos permiten administrar **varias empresas dentro de
 ![Ciclo de vida de un usuario](assets/img/10_ciclo_usuario.png)
 
 *Figura: Ciclo de vida de un usuario*
-
 
 **Etapas del ciclo de vida del usuario:**
 
@@ -364,7 +354,6 @@ La mayoría de los ERP modernos permiten administrar **varias empresas dentro de
 ![Modelo de seguridad RBAC](assets/img/08_rbac.png)
 
 *Figura: Modelo de seguridad RBAC*
-
 
 **Ventajas del modelo RBAC:**
 - **Simple de administrar:** se cambia el rol y todos los permisos se actualizan.
@@ -404,7 +393,6 @@ La mayoría de los ERP modernos permiten administrar **varias empresas dentro de
 ![Paso 1 de la práctica en Odoo: crear una empresa](assets/img/12_crear_empresa.png)
 
 *Figura: Paso 1 de la práctica en Odoo: crear una empresa*
-
 
 1. Iniciar sesión como **administrador**.
 2. Ir a **Ajustes → General → Compañías**.
