@@ -1,0 +1,10 @@
+classDiagram
+    class Calculadora {
+        +sumar(a : int, b : int) : int
+        +dividir(a : int, b : int) : double
+    }
+    class CalculadoraTest {
+        +testSumar() : void
+        +testDividirPorCero() : void
+    }
+    Calculadora <.. CalculadoraTest : prueba

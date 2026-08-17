@@ -6,6 +6,7 @@ Reemplaza bloques mermaid por referencias a imágenes PNG + leyenda.
 Uso:
     python3 generate_word_md.py 00_introduccion_erp
     python3 generate_word_md.py --all
+    python3 generate_word_md.py --base ../prog-avanzada --all
 """
 
 import sys
@@ -17,6 +18,72 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 # con los bloques mermaid que aparecen en teoria.md.
 # Formato: (nombre_png, caption)
 THEMES = {
+    # --- Programación Avanzada (prog-avanzada) ---
+    "00_introduccion_poo": [
+        ("01_evolucion_paradigmas.png", "Evolución de los paradigmas de programación"),
+        ("02_pilares_poo.png",           "Los cuatro pilares de la POO"),
+        ("03_clase_vs_objeto.png",       "Clase como molde y objetos como instancias"),
+        ("04_paradigmas_mixtos.png",     "Lenguajes modernos y paradigmas mixtos"),
+    ],
+    "01_clases_objetos": [
+        ("01_anatomia_clase.png",        "Anatomía de una clase en UML"),
+        ("02_modificadores_acceso.png",  "Modificadores de acceso en Java"),
+        ("03_ciclo_vida_objeto.png",     "Ciclo de vida de un objeto"),
+        ("04_gestion_dependencias.png",  "Gestión de dependencias con Maven y Gradle"),
+    ],
+    "02_uml_diseno": [
+        ("01_diagrama_clases.png",       "Diagrama de clases de una biblioteca"),
+        ("02_casos_uso.png",             "Diagrama de casos de uso de la biblioteca"),
+        ("03_secuencia.png",             "Diagrama de secuencia del préstamo de libros"),
+        ("04_analisis_a_codigo.png",     "Del análisis al código: flujo completo"),
+        ("05_patron_singleton.png",      "Patrón Singleton: instancia única"),
+        ("06_patrones_factory_strategy.png", "Patrones Factory y Strategy"),
+    ],
+    "03_herencia_polimorfismo": [
+        ("01_relaciones_clases.png",     "Asociación, agregación, composición y herencia"),
+        ("02_jerarquia_herencia.png",    "Jerarquía de herencia de Animal"),
+        ("03_sobrecarga_sobreescritura.png", "Sobrecarga vs sobreescritura"),
+        ("04_interface_vs_abstracta.png","Interface vs clase abstracta"),
+        ("05_polimorfismo.png",          "Polimorfismo en acción con Figuras"),
+        ("06_solid.png",                 "Los cinco principios SOLID"),
+    ],
+    "04_excepciones": [
+        ("01_jerarquia_excepciones.png", "Jerarquía de excepciones en Java"),
+        ("02_flujo_try_catch.png",       "Flujo de try/catch/finally"),
+        ("03_ciclo_depuracion.png",      "Ciclo de depuración con logs y debugger"),
+    ],
+    "05_genericos_colecciones": [
+        ("01_jerarquia_colecciones.png", "Jerarquía del framework de colecciones"),
+        ("02_list_set_map.png",          "¿List, Set o Map? Decisión de estructura"),
+        ("03_generics.png",              "Clase genérica Caja con T"),
+        ("04_iteradores.png",            "Recorrido de colecciones con iterador"),
+    ],
+    "06_io_serializacion": [
+        ("01_flujo_archivos.png",        "Flujo de lectura y escritura de archivos"),
+        ("02_jerarquia_streams.png",     "Jerarquía de streams de bytes y caracteres"),
+        ("03_serializacion.png",         "Ciclo de serialización y deserialización"),
+        ("04_json_vs_xml.png",           "Comparativa JSON vs XML"),
+    ],
+    "07_gui_eventos": [
+        ("01_arquitectura_gui.png",      "Arquitectura MVC de una aplicación GUI"),
+        ("02_ciclo_eventos.png",         "Ciclo de manejo de eventos"),
+        ("03_componentes_gui.png",       "Componentes típicos de una GUI"),
+    ],
+    "08_testing_devops": [
+        ("01_flujo_testing.png",         "Flujo de pruebas unitarias y de integración"),
+        ("02_git_workflow.png",          "Flujo de trabajo con Git y ramas"),
+        ("03_pipeline_cicd.png",         "Pipeline de CI/CD"),
+        ("04_junit.png",                 "Relación entre la clase y su test JUnit"),
+        ("05_documentacion_estilo.png",  "Documentación, estilo y revisión de código"),
+    ],
+    "09_tendencias": [
+        ("01_concurrencia_paralela.png", "Concurrencia vs paralelismo"),
+        ("02_microservicios.png",        "Arquitectura de microservicios"),
+        ("03_api_rest.png",              "Flujo de una API REST"),
+        ("04_ciclo_tdd.png",             "Ciclo TDD: RED-GREEN-REFACTOR"),
+        ("05_seguridad_etica.png",       "Desarrollo seguro y ético"),
+    ],
+
     "00_introduccion_erp": [
         ("01_evolucion_erp.png",       "Evolución histórica de los ERP"),
         ("02_arquitectura_erp.png",    "Arquitectura en 3 capas de un ERP"),
@@ -157,15 +224,23 @@ def process_theme(theme_dir: Path) -> bool:
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Uso: python3 generate_word_md.py <tema> | --all",
+    # Argumentos: [--base DIR] <tema> | --all
+    base_dir = SCRIPT_DIR
+    args = sys.argv[1:]
+
+    if len(args) >= 2 and args[0] == "--base":
+        base_dir = Path(args[1])
+        args = args[2:]
+
+    if len(args) < 1:
+        print("Uso: python3 generate_word_md.py [--base DIR] <tema> | --all",
               file=sys.stderr)
         sys.exit(1)
 
-    arg = sys.argv[1]
+    arg = args[0]
 
     if arg == "--all":
-        themes = sorted(d for d in SCRIPT_DIR.iterdir()
+        themes = sorted(d for d in base_dir.iterdir()
                         if d.is_dir() and d.name[0:2].isdigit())
         if not themes:
             print("No se encontraron carpetas de temas", file=sys.stderr)
@@ -174,7 +249,7 @@ def main():
         for theme_dir in themes:
             process_theme(theme_dir)
     else:
-        theme_dir = SCRIPT_DIR / arg
+        theme_dir = base_dir / arg
         if not theme_dir.is_dir():
             print(f"Error: no se encontro la carpeta {arg}", file=sys.stderr)
             sys.exit(1)

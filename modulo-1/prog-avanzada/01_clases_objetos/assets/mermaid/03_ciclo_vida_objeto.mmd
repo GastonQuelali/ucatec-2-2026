@@ -1,0 +1,5 @@
+flowchart LR
+    A[Declaración<br/>CuentaBancaria cuenta;] -->     B["Instanciación<br/>new CuentaBancaria(...)<br/>asigna memoria"]
+    B --> C["Uso<br/>cuenta.depositar(100);<br/>cuenta.consultarSaldo();"]
+    C --> D[Finalización<br/>sin referencias →<br/>GC libera memoria]
+    D -.-> A

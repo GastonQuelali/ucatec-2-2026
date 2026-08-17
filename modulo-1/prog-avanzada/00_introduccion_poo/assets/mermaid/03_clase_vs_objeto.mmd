@@ -1,0 +1,11 @@
+flowchart LR
+    subgraph CLASE[Clase: el molde / plano]
+        C1[Atributos<br/>título, autor, isbn]
+        C2["Métodos<br/>prestar(), devolver()"]
+    end
+    subgraph OBJETOS[Objetos: las instancias]
+        O1[libro1<br/>'Don Quijote' · Cervantes · 978]
+        O2[libro2<br/>'Cien años' · García Márquez · 123]
+        O3[libro3<br/>'Metamorfosis' · Kafka · 456]
+    end
+    CLASE --> OBJETOS

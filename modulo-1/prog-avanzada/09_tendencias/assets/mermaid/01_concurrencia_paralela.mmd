@@ -1,0 +1,7 @@
+flowchart LR
+    A[Programa secuencial<br/>una tarea a la vez] --> B[Concurrencia<br/>varias tareas parecen<br/>avanzar al mismo tiempo]
+    A --> C[Paralelismo<br/>varias tareas realmente<br/>se ejecutan en paralelo<br/>multi-núcleo]
+    B --> E[Ejemplo:<br/>atender 10 usuarios<br/>intercalando su trabajo]
+    C --> F[Ejemplo:<br/>procesar 4 imágenes<br/>en 4 núcleos a la vez]
+    E --> D[Java: Thread, Runnable<br/>ExecutorService]
+    F --> D

@@ -1,0 +1,10 @@
+flowchart LR
+    A[1. push a GitHub] --> B[2. CI detecta el cambio]
+    B --> C[3. Compilar<br/>mvn compile]
+    C --> D[4. Ejecutar pruebas<br/>mvn test]
+    D --> E{¿Pruebas OK?}
+    E -- Sí --> F[5. Empaquetar<br/>mvn package]
+    F --> G[6. Desplegar<br/>servidor / artifact]
+    E -- No --> H[7. Notificar al equipo]
+    H --> I[8. Corregir y volver a subir]
+    I --> A

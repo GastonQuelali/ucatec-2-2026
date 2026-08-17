@@ -1,0 +1,10 @@
+flowchart TD
+    A[Formato de intercambio] --> J[JSON<br/>JavaScript Object Notation]
+    A --> X[XML<br/>eXtensible Markup Language]
+    J --> J1["{nombre: Libro, precio: 25.5}"]
+    J --> J2[Ligero, legible,<br/>estándar en APIs REST]
+    X --> X1["<producto><nombre>Libro</nombre><precio>25.5</precio></producto>"]
+    X --> X2[Verboso, con etiquetas,<br/>documentos complejos]
+    J --> D[¿Cuál elegir?]
+    X --> D
+    D --> R[APIs y servicios web → JSON<br/>Documentos y config. complejas → XML]

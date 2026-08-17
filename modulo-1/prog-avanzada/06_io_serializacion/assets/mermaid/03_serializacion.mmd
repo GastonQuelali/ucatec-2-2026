@@ -1,0 +1,5 @@
+flowchart LR
+    A["Objeto en memoria<br/>Producto(id, nombre, precio)"] --> B["Serialización<br/>convertir a formato<br/>JSON · XML · binario"]
+    B --> C[Almacenamiento o<br/>transmisión]
+    C --> D[Deserialización<br/>reconstruir el objeto]
+    D -->     E["Objeto restaurado<br/>Producto(id, nombre, precio)"]

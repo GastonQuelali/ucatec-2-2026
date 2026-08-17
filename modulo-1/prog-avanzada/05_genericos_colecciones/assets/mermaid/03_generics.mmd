@@ -1,0 +1,10 @@
+classDiagram
+    class Caja~T~ {
+        -contenido : T
+        +guardar(valor : T)
+        +obtener() : T
+    }
+    class CajaString
+    class CajaInteger
+    Caja <|-- CajaString
+    Caja <|-- CajaInteger

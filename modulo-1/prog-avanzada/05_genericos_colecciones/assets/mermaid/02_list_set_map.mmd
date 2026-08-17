@@ -1,0 +1,8 @@
+flowchart TD
+    P[¿Qué estructura usar?] --> L[List<br/>ordenada, permite duplicados<br/>acceso por índice]
+    P --> S[Set<br/>sin duplicados<br/>orden según tipo]
+    P --> M[Map<br/>clave → valor<br/>búsqueda por clave]
+    L --> L1[ArrayList: rápido por índice<br/>LinkedList: rápido al insertar]
+    S --> S1[HashSet: rápido<br/>TreeSet: ordenado]
+    M --> M1[HashMap: rápido<br/>TreeMap: ordenado por clave]
+    P --> D[Decisión según:<br/>orden, duplicados, velocidad]

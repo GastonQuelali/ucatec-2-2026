@@ -1,0 +1,9 @@
+flowchart TD
+    C[Gestión de dependencias] --> M[Maven]
+    C --> G[Gradle]
+    C --> J[Descarga manual de .jar]
+    M --> M1[archivo pom.xml<br/>declara librerías y versiones]
+    M1 --> M2[mvn install / build<br/>descarga y compila]
+    M --> M3[Repositorio central Maven]
+    G --> G1[archivo build.gradle<br/>declara dependencias]
+    J --> J1[Agregar .jar al classpath<br/>propenso a errores]

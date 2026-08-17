@@ -1,0 +1,9 @@
+flowchart LR
+    A[Síntoma<br/>'la app se cae' o mensaje raro] --> B[Logs<br/>SLF4J/Log4j registran eventos]
+    B --> C[Punto de quiebre<br/>breakpoint en IDE]
+    C --> D[Paso a paso<br/>step over / step into]
+    D --> E{¿Encontraste<br/>la causa?}
+    E -- No --> C
+    E -- Sí --> F[Corregir el código]
+    F --> G[Repetir la prueba]
+    G --> A

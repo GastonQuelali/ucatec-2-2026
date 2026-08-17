@@ -1,0 +1,38 @@
+classDiagram
+    class Collection~E~ {
+        +add(e : E) : boolean
+        +size() : int
+        +remove(o : Object) : boolean
+    }
+    class List~E~ {
+        +get(index : int) : E
+        +set(index : int, e : E) : E
+    }
+    class Set~E~ {
+        +contains(o : Object) : boolean
+    }
+    class Queue~E~ {
+        +offer(e : E) : boolean
+        +poll() : E
+    }
+    class Map~K, V~ {
+        +put(k : K, v : V) : V
+        +get(k : K) : V
+    }
+    class ArrayList~E~
+    class LinkedList~E~
+    class HashSet~E~
+    class TreeSet~E~
+    class PriorityQueue~E~
+    class HashMap~K, V~
+    class TreeMap~K, V~
+    Collection <|-- List
+    Collection <|-- Set
+    Collection <|-- Queue
+    List <|-- ArrayList
+    List <|-- LinkedList
+    Set <|-- HashSet
+    Set <|-- TreeSet
+    Queue <|-- PriorityQueue
+    Map <|-- HashMap
+    Map <|-- TreeMap

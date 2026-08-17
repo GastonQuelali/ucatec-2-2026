@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor Socio as Socio
+    participant UI as Interfaz
+    participant S as Sistema
+    participant BD as Base de datos
+
+    Socio->>UI: Ingresa título del libro
+    UI->>S: buscarLibro(titulo)
+    S->>BD: SELECT * FROM libro WHERE titulo = ?
+    BD-->>S: Lista de libros disponibles
+    S-->>UI: Muestra resultados
+    UI-->>Socio: Selecciona libro
+    Socio->>UI: Confirma préstamo
+    UI->>S: prestarLibro(isbn)
+    S->>BD: UPDATE libro SET disponible = false
+    BD-->>S: OK
+    S-->>UI: Préstamo registrado
+    UI-->>Socio: Confirmación

@@ -1,0 +1,10 @@
+flowchart TD
+    C[Cliente] --> F[FabricaNotificacion<br/>factory]
+    F -->     P["crear(tipo)<br/>selecciona implementación"]
+    P --> E[EmailNotificador]
+    P --> S[SmsNotificador]
+    P --> W[WhatsappNotificador]
+    C --> N["Notificador<br/>interface enviar()"]
+    E --> N
+    S --> N
+    W --> N

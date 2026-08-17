@@ -1,0 +1,14 @@
+classDiagram
+    class Animal {
+        #nombre : String
+        +hacerSonido()*
+        +comer()*
+    }
+    class Perro
+    class Gato
+    class Vaca
+    class Mascota
+    Animal <|-- Perro
+    Animal <|-- Gato
+    Animal <|-- Vaca
+    Perro <|-- Mascota

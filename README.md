@@ -1,6 +1,19 @@
 # UCatec 2 · 2026 — Material Didáctico de Informática
 
-Repositorio con el material docente de la asignatura **Sistemas de Datos para la Gestión** (SIS216) de UCatec, organizado por módulos y temas.
+Repositorio con el material docente de UCatec, organizado por módulos y temas.
+
+## Asignaturas
+
+| Módulo | Asignatura | Descripción |
+|---|---|---|
+| `modulo-1/inf3/` | Sistemas de Datos para la Gestión (SIS216) | 7 temas: ERP, BDD, SGBD, SQL, informes y automatización |
+| `modulo-1/prog-avanzada/` | Programación Avanzada (SIS120) | 10 unidades de POO, UML, colecciones, E/S, GUI, testing y tendencias (Java) |
+
+A continuación, el detalle de cada asignatura.
+
+---
+
+## Sistemas de Datos para la Gestión (SIS216)
 
 ## Estructura del repositorio
 
@@ -56,6 +69,9 @@ python3 modulo-1/inf3/generate_word_md.py 00_introduccion_erp
 
 # Para todos los temas
 python3 modulo-1/inf3/generate_word_md.py --all
+
+# Para todas las unidades de Programación Avanzada
+python3 modulo-1/inf3/generate_word_md.py --base modulo-1/prog-avanzada --all
 ```
 
 ## Renderizar presentaciones
@@ -83,6 +99,25 @@ mmdc -i assets/mermaid/01_evolucion_erp.mmd -o assets/img/01_evolucion_erp.png
 | 4 | Introducción al SQL y Automatización | ✅ Completo |
 | 5 | Informes, Visualización y Toma de Decisiones | ✅ Completo |
 | 6 | Automatización Empresarial y Conectores Digitales | ✅ Completo |
+
+---
+
+## Programación Avanzada (SIS120)
+
+Material completo en `modulo-1/prog-avanzada/` (10 unidades, lenguaje Java). Detalle de estructura, convención de archivos y generación de `teoria_para_word.md` en su [README](modulo-1/prog-avanzada/README.md).
+
+| # | Unidad | Estado |
+|---|---|---|
+| 0 | Introducción a la POO | ✅ Completo |
+| 1 | Clases y Objetos | ✅ Completo |
+| 2 | UML y Diseño de Software | ✅ Completo |
+| 3 | Herencia y Polimorfismo | ✅ Completo |
+| 4 | Manejo de Excepciones | ✅ Completo |
+| 5 | Genéricos y Colecciones | ✅ Completo |
+| 6 | Entrada/Salida y Serialización | ✅ Completo |
+| 7 | GUI y Manejo de Eventos | ✅ Completo |
+| 8 | Testing y DevOps | ✅ Completo |
+| 9 | Tendencias y Temas Emergentes | ✅ Completo |
 
 ## Autor
 

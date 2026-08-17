@@ -1,0 +1,8 @@
+flowchart TD
+    M[Modificadores de acceso] --> P[private<br/>Solo la misma clase]
+    M --> PP[public<br/>Accesible desde cualquier clase]
+    M --> PR[protected<br/>Misma clase + paquete + subclases]
+    M --> PAQ["sin modificador (package-private)<br/>Misma clase + mismo paquete"]
+    P --> E1[Atributo saldo]
+    PP --> E2[Métodos depositar / retirar]
+    PR --> E3[Campos para subclases]

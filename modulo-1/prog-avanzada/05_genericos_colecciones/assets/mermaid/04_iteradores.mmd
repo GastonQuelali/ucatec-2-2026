@@ -1,0 +1,6 @@
+flowchart LR
+    A["Iterator<br/>next() · hasNext() · remove()"] --> B["Lista<br/>ArrayList de Producto"]
+    B --> C["while (it.hasNext())<br/>Producto p = it.next()"]
+    C --> D[Procesar producto]
+    D --> C
+    C --> E["for-each<br/>for (Producto p : lista)"]

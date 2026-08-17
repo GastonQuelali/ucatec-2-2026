@@ -1,0 +1,10 @@
+flowchart TD
+    B[Biblioteca] --- US[Prestar libro]
+    B --- C[Registrarse como socio]
+    B --- D[Buscar libro por título]
+    B --- E[Devolver libro]
+    US --- A[Administrador]
+    US --- S[Bibliotecario]
+    C --- S
+    E --- S
+    D -.-> G[Visitante]

@@ -1,0 +1,6 @@
+flowchart LR
+    U[Usuario<br/>hace clic en botón] --> V[Vista<br/>componentes JavaFX]
+    V --> C[Controlador<br/>maneja el evento<br/>actualiza el modelo]
+    C --> M[Modelo<br/>datos y lógica de negocio]
+    M --> V
+    V --> U[Interfaz actualizada]

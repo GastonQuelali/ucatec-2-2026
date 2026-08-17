@@ -1,0 +1,7 @@
+flowchart TD
+    A[Inicio] --> B[try<br/>bloque que puede fallar]
+    B --> C{¿Ocurrió<br/>una excepción?}
+    C -- No --> E[finally<br/>se ejecuta siempre]
+    C -- Sí -->     D["catch (Excepcion e)<br/>manejo del error"]
+    D --> E
+    E --> F[Continuar programa]

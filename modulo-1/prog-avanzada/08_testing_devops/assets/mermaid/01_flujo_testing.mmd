@@ -1,0 +1,9 @@
+flowchart TD
+    A[Código fuente] --> B[Pruebas unitarias<br/>JUnit: verifica métodos<br/>de forma aislada]
+    A --> C[Pruebas de integración<br/>verifican la interacción<br/>entre componentes]
+    B --> D[Pipeline CI/CD<br/>compila · testea · despliega]
+    C --> D
+    D --> E{¿Pasan todas<br/>las pruebas?}
+    E -- Sí --> F[Despliegue]
+    E -- No --> G[Corregir y repetir]
+    G --> B

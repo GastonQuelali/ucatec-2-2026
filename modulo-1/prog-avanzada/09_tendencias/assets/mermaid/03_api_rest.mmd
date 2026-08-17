@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant App as Aplicación
+    participant API as API REST<br/>(ej. ejemplo.com/api)
+    participant BD as Base de datos
+
+    App->>API: GET /productos
+    API->>BD: SELECT * FROM producto
+    BD-->>API: Lista de productos
+    API-->>App: 200 OK + JSON
+    App->>API: POST /productos {"nombre":"Libro"}
+    API->>BD: INSERT INTO producto...
+    BD-->>API: id generado
+    API-->>App: 201 Created

@@ -1,0 +1,20 @@
+classDiagram
+    class Throwable
+    class Exception {
+        +getMessage() : String
+    }
+    class RuntimeException
+    class Error
+    class IOException
+    class SQLException
+    class NullPointerException
+    class ArithmeticException
+    class NumberFormatException
+    Throwable <|-- Exception
+    Throwable <|-- Error
+    Exception <|-- RuntimeException
+    Exception <|-- IOException
+    Exception <|-- SQLException
+    RuntimeException <|-- NullPointerException
+    RuntimeException <|-- ArithmeticException
+    RuntimeException <|-- NumberFormatException

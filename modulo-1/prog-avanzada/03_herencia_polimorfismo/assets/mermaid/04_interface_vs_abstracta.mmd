@@ -1,0 +1,11 @@
+flowchart TD
+    C[Cómo decidir] --> E[Interface]
+    C --> A[Clase abstracta]
+    E --> E1[Contrato de métodos<br/>sin implementación]
+    E --> E2[Constantes public static final]
+    E --> E3[Una clase puede implementar<br/>varias interfaces]
+    A --> A1[Puede tener atributos y<br/>métodos implementados]
+    A --> A2[Algunos métodos abstractos]
+    A --> A3[Solo se hereda de UNA<br/>clase abstracta]
+    E --> D[Preferir interfaces<br/>para definir 'puede hacer']
+    A --> D

@@ -1,0 +1,5 @@
+flowchart LR
+    A[Evento<br/>clic en botón] --> B[Registro<br/>el framework detecta la acción]
+    B --> C[Listener<br/>objeto con método handler]
+    C --> D[handleAction<br/>ejecuta la lógica]
+    D --> E[Actualizar UI]

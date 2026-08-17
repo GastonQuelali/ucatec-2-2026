@@ -1,0 +1,21 @@
+classDiagram
+    class Cliente {
+        -id : int
+        -nombre : String
+    }
+    class Cuenta {
+        -saldo : double
+        +depositar(monto : double)
+        +retirar(monto : double)
+    }
+    class CuentaCorriente {
+        -descubierto : double
+        +retirar(monto : double)
+    }
+    class CuentaAhorro {
+        -tasaInteres : double
+        +aplicarInteres()
+    }
+    Cliente "1" --> "1..*" Cuenta : posee
+    Cuenta <|-- CuentaCorriente
+    Cuenta <|-- CuentaAhorro

@@ -1,0 +1,11 @@
+flowchart TD
+    A[Cliente<br/>app web o móvil] --> G[API Gateway<br/>enruta las peticiones]
+    G --> U[Servicio Usuarios<br/>microservicio]
+    G --> P[Servicio Pedidos<br/>microservicio]
+    G --> C[Servicio Pagos<br/>microservicio]
+    U --> D[(BD usuarios)]
+    P --> D2[(BD pedidos)]
+    C --> D3[(BD pagos)]
+    U -.-> E[Se comunican por<br/>REST / mensajes]
+    P -.-> E
+    C -.-> E

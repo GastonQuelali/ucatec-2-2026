@@ -1,0 +1,5 @@
+flowchart TD
+    M[ConexionBD] --> I[instancia<br/>única]
+    I --> P1["public static getInstancia()<br/>devuelve la misma instancia"]
+    P1 --> P2["constructor privado<br/>evita new ConexionBD()"]
+    P2 --> P3[Clientes<br/>obtienen la misma conexión]

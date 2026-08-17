@@ -1,0 +1,9 @@
+flowchart TD
+    M[Método nombre en común] --> A[Sobrecarga<br/>Overloading]
+    M --> B[Sobreescritura<br/>Overriding]
+    A --> A1[Misma clase]
+    A --> A2["Parámetros distintos<br/>sumar(int,int) vs sumar(double,double)"]
+    A --> A3[El compilador elige]
+    B --> B1[Clase hija redefine método del padre]
+    B --> B2[Misma firma + @Override]
+    B --> B3[Base del polimorfismo]

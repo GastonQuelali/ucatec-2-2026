@@ -1,0 +1,10 @@
+flowchart LR
+    A[main] --> B[feature/registro<br/>rama de trabajo]
+    B --> C[commit 1<br/>+ tests]
+    B --> D[commit 2<br/>+ código]
+    B --> E[Push a GitHub]
+    E --> F[Pull Request<br/>revisión entre pares]
+    F --> G{¿Aprueban?}
+    G -- No --> B
+    G -- Sí --> H[Merge a main]
+    H --> I[CI valida main]
