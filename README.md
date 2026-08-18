@@ -21,6 +21,8 @@ A continuación, el detalle de cada asignatura.
 modulo-1/inf3/
 ├── README.md
 ├── generate_word_md.py              # Script para generar teoria_para_word.md
+├── generate_pptx.py                 # Script para generar presentacion.pptx/pdf
+├── generate_pdf.py                  # Script para generar teoria.pdf (mmdc + marp)
 ├── foros.md                         # Temas de foro por tema (recomendados + opciones)
 │
 ├── 00_introduccion_erp/             # Tema 0 — Introducción a los Sistemas ERP
@@ -29,6 +31,7 @@ modulo-1/inf3/
 │   ├── guia_docente.md              # Guía docente y plan de clases
 │   ├── teoria_para_word.md          # Generado: teoría con imágenes (para Word)
 │   ├── teoria.docx                  # Teoría en Word
+│   ├── teoria.pdf                   # Teoría en PDF
 │   ├── presentacion.pptx            # Presentación en PowerPoint
 │   ├── presentacion.pdf             # Presentación en PDF
 │   └── assets/
@@ -56,6 +59,7 @@ modulo-1/inf3/
 | `guia_docente.md` | Plan de clases, evaluación y material didáctico |
 | `teoria_para_word.md` | Generado por script (mermaid → imágenes) |
 | `teoria.docx` | Exportado a Word |
+| `teoria.pdf` | Generado por script (mmdc + Marp) |
 | `presentacion.pptx` | Exportado a PowerPoint |
 | `presentacion.pdf` | Exportado a PDF |
 | `assets/mermaid/` | Diagramas fuente `.mmd` |
@@ -74,9 +78,49 @@ python3 modulo-1/inf3/generate_word_md.py --all
 python3 modulo-1/inf3/generate_word_md.py --base modulo-1/prog-avanzada --all
 ```
 
-## Renderizar presentaciones
+## Generar teoría en PDF
 
-La presentación `presentacion.md` usa **Marp**:
+```bash
+# Generar todos los teoria.pdf (inf3)
+python3 modulo-1/inf3/generate_pdf.py --all
+
+# Generar todos los teoria.pdf (prog-avanzada)
+python3 modulo-1/inf3/generate_pdf.py --base modulo-1/prog-avanzada --all
+
+# Un tema específico
+python3 modulo-1/inf3/generate_pdf.py 00_introduccion_erp
+```
+
+Requiere [Mermaid CLI](https://mermaid.js.org/) y [Google Chrome](https://www.google.com/chrome/):
+
+```bash
+pip install markdown
+npm install -g @mermaid-js/mermaid-cli
+```
+
+## Generar presentaciones (PPTX / PDF)
+
+```bash
+# Generar todas las presentaciones en PowerPoint
+python3 modulo-1/inf3/generate_pptx.py --all
+
+# También exportar PDF junto con PPTX
+python3 modulo-1/inf3/generate_pptx.py --all --pdf
+
+# Un tema específico
+python3 modulo-1/inf3/generate_pptx.py 00_introduccion_erp
+
+# Todas las unidades de Programación Avanzada
+python3 modulo-1/inf3/generate_pptx.py --base modulo-1/prog-avanzada --all
+```
+
+Requiere [Marp CLI](https://marp.app/) instalado:
+
+```bash
+npm install -g @marp-team/marp-cli
+```
+
+También se puede usar Marp directamente:
 
 ```bash
 marp modulo-1/inf3/00_introduccion_erp/presentacion.md --allow-local-files --pdf
